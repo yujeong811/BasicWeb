@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web Shopping</title>
+<link rel="shortcut icon" type="image/x-icon" href="../images/쇼핑백.jpg" />
+<link rel="stylesheet" href="../project/mystyle.css">
+</head>
+<body>
+	<div id="header">
+		<img id="hi" src="../images/shopping.jpg" alt="shopping.jpg">
+		<p id="pt">Web Shopping</p>
+	</div>
+
+	<div id="nav">
+		<a id="na" href="index.html" target="">HOME</a>
+		<a id="na" href="" target="">SHOPPING ABOUT</a>
+		<a id="na" href="" target="">NEWS</a>
+		<a id="na" href="" target="">MY ACCOUNT</a>
+		<a id="na" href="" target="">CONTACTS</a>
+	</div>
+
+	<aside id="left">
+		<h2 id="lh">카테고리</h2>
+		<ul>
+			<li><a id="la" href="computer.html" target="ifrcom">컴퓨터</a></li>
+			<li><a id="la" href="clothing.html" target="ifrcom">의류</a></li>
+			<li><a id="la" href="스포츠레저.html" target="ifrcom">스포츠/레저</a></li>
+			<li><a id="la" href="가구인테리어.html" target="ifrcom">가구/인테리어</a></li>
+			<li><a id="la" href="식품.html" target="ifrcom">식품</a></li>
+		</ul>
+	</aside>
+
+	<div id="content">
+		 <section id="main">
+       		 <article id="article1">
+            	<iframe src="computer.html" scrolling="no" frameBorder="no" name="ifrcom"> 
+            	</iframe>
+       		 </article>
+   		 </section>
+	</div>
+
+	<aside id="right">
+		<h2 id="rh">Shopping Cart</h2>
+		<span id="rp">현재 쇼핑카트에 물품이 없습니다.</span><br>
+		<a id="ra" href="shopcart.html" target="_blank">쇼핑카트 보기</a>
+
+		<h2 id="rh">Log In</h2>
+		<form action="login.jsp" method="post">
+			<label>아이디</label><br>
+			<input type="text" name="name" id="name"><br>
+			<label>패스워드</label><br>
+			<input type="password" name="password" id="password"><br>
+			<br>
+			<input type="submit" value="로그인">
+			<input type="reset" value="초기화">
+		</form>
+		<a id="ra2" href="register.html" target="_blank">회원가입</a>
+		<a href="" target="">비밀번호 분실</a>
+	</aside>
+
+	<div id="footer">
+		<p id="fp">2021.12.23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;대덕인재개발원 042-1234-5678</p>
+	</div>
+</body>
+</html>

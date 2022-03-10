@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Computer</title>
+<style>
+.sikparent {
+	width : 1200px;
+	height : 600px;
+	display : flex;
+	margin : 33px 50px;
+}
+
+.sikchild {
+	flex : 1;
+	border : 2px solid lightgray;
+	width : 350px;
+	height : 480px;
+	margin-right : 30px;
+}
+
+#sikimg {
+	width : 350px;
+	height : 300px;
+	margin : 30px 110px;
+}
+
+#sikp1 {
+	margin : auto 110px;
+}
+
+#sikadd {
+	margin : auto 200px; 
+}
+</style>
+</head>
+<body>
+	<div class="sikparent">
+		<div class="sikchild">
+			<img id="sikimg" src="../images/식품1.jpg" alt="식품1.jpg">
+			<p id="sikp1">영양죽</p><br><br>
+			<input id="sikadd" type="submit" value="쇼핑카트에 추가하기">
+		</div>
+		
+		<div class="sikchild">
+			<img id="sikimg" src="../images/식품2.jpg" alt="식품2.jpg">
+			<p id="sikp1">꿀사과</p><br><br>
+			<input id="sikadd" type="submit" value="쇼핑카트에 추가하기">
+		</div>
+	</div>	
+</body>
+</html>

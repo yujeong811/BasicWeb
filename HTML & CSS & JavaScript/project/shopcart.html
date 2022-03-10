@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Shop Cart</title>
+<style>
+h1 {
+	text-align : center;
+	margin-top : 150px;
+}
+
+table {
+	text-align : center;
+	width : 35%;
+	height : 200px;
+	margin : 10px 630px;
+	border-collapse: collapse;
+	border : 3px solid gray;
+}
+
+input[type=text] {
+	text-align : center;
+	width : 96%;
+}
+
+#su {
+	width : 100px;
+}
+
+#hap {
+	width : 200px;
+}
+
+#button1 {
+	margin-left : 46%;
+}
+
+a {
+	margin-left : 33%;
+	color : black;
+	text-decoration: none;
+}
+
+</style>
+<script>
+function calc() {
+	
+	
+}
+</script>
+</head>
+<body>
+	<h1>장바구니 페이지</h1>
+	<table border="1">
+		<tr>
+			<th>품목</th>
+			<th>가격</th>
+			<th id="su">수량</th>
+			<th id="hap">합계</th>
+		<tr>
+		<tr>
+			<td>컴퓨터 세트</td>
+			<td>2,000,000원</td>
+			<td><input type="text" value="0"></td>
+			<td><input type="text" value="0"></td>
+		<tr>
+		<tr>
+			<td>티셔츠</td>
+			<td>50,000원</td>
+			<td><input type="text" value="0"></td>
+			<td><input type="text" value="0"></td>
+		<tr>
+		<tr>
+			<td>음악파일</td>
+			<td>1,000원</td>
+			<td><input type="text" value="0"></td>
+			<td><input type="text" value="0"></td>
+		<tr>
+		<tr>
+			<td>영화파일</td>
+			<td>5,000원</td>
+			<td><input type="text" value="0"></td>
+			<td><input type="text" value="0"></td>
+		<tr>
+		<br><br>
+	</table>
+		<input id="button1" type="submit" value="계산" onclick="calc()">
+		<input id="button" type="submit" value="구매">
+		<input id="button" type="reset" value="초기화">
+		<br><br>
+		<a href="index.html">Back to Home</a>
+</body>
+</html>
