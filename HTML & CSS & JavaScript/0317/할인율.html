@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+#result1 {
+	box-sizing: border-box;
+}
+.dimg {
+	width : calc(20% - 20px);
+	height : auto;
+	display : inline-block;
+}
+img {
+	width : 100%;
+	height : 70%;
+	margin : 10px;
+}
+</style>
+
+<script>
+	window.onload = function()  {
+		vlis = document.getElementsByClassName('dimg');
+		
+		for (i = 0; i < vlis.length; i++) {
+			vlis[i].addEventListener('click', proc1);
+		}
+	}
+	
+	function proc1() {
+		str = this.firstChild.data;
+		
+		rand = parseInt(Math.random() * 6) + 5;
+		
+		text = document.createTextNode("할인율 " + rand + "%");
+
+		ptag = document.createElement('p');
+
+		ptag.appendChild(text);
+		
+		this.appendChild(ptag);	
+	}
+
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<pre>
+		div 4개 옆으로 나열
+		각각 div에 img 넣음
+		랜덤을 5~10사이로 발생
+		할인율 5% - textnode를 생성
+		
+		p태그를 생성
+		p태그에 textnode를 자식으로 추가한다
+		p태그를 div에 자식으로 추가한다
+		
+		클릭이벤트를 각각 div에 설정하지 않고 일괄 등록 방식으로 한다
+		</pre>
+		<div id="result1">
+			<div class="dimg">
+				<img src="../images/컴퓨터1.jpg" alt="">
+			</div>
+			<div class="dimg">
+				<img src="../images/컴퓨터2.jpg" alt="">
+			</div>
+			<div class="dimg">
+				<img src="../images/컴퓨터3.jpg" alt="">
+			</div>
+			<div class="dimg">
+				<img src="../images/스포츠.jpg" alt="">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
