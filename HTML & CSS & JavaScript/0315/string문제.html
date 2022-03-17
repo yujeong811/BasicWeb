@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+function proc1() {
+	var today = new Date();
+	
+	// 주민번호 입력 - 110326 - 4123456
+	num = prompt('주민번호를 입력해주세요.');
+	
+	// 추출하기 11, 03, 26
+	yy = num.substr(0,2);
+	mm = num.substr(2,2);
+	dd = num.substr(4,2);
+	gend = num.substr(7,1);
+	
+	// 태어난 년도 구하기
+
+	if (gend == "1" || gend == "2") {
+		byear = "19" + yy;
+	} else if (gend == "3" || gend == "4") {
+		byear = "20" + yy;
+	}
+		
+	// 생년월일  2011년 3월 26일 형태 구성
+	res = byear + "년 " + mm + "월 " + dd + "일";
+	
+	// 성별 구하기	
+	if (gend == "1" || gend == "3") {
+		gender = "남자";
+	} else if (gend == "2" || gend == "4") {
+		gender = "여자";
+	}
+		
+	// 나이 구하기 => 현재년도 - 태어난년도
+	age = today.getFullYear() - parseInt(byear);
+	
+	// 출력
+	/* 주민번호 - 110326-4******
+	생년월일 - 
+	성별 - 
+	나이 -  */
+	
+	out = "주민번호 : " + num.slice(0, 8) + "******<br>";
+	out += "생년월일 : " + res + "<br>";
+	out += "성별 : " + gender + "<br>";
+	out += "나이 : " + age + "살<br>";
+	
+	document.getElementById('result1').innerHTML = out;
+}
+
+function proc2() {
+	input = prompt('주민번호를 입력해주세요.');
+	
+	code = input.replace("-", "");
+	
+	multi = "234567892345"; 
+
+	total = 0;
+	
+	for(i=0; i < code.length - 1; i++) {
+		/* total += ((i%8)+2) * code.substr(i, 1); */ // multi 안쓰고 하는 방법
+		total += multi.substr(i, 1) * code.substr(i, 1); 
+	}
+	
+	result = 11 - total % 11;
+	
+	if(result == 10) result = 0;
+	if(result == 11) result = 1;
+		
+	// result = result % 10;
+	
+	if(result == code.substr(12,1)) {
+		res = "유효성 검사 성공";
+	} else {
+		res = "유효성 검사 실패";
+	}
+	
+	out = "주민번호 : " + input.slice(0, 8) + "******<br>";
+	out += "유효성 검사 결과 : " + res;
+	
+	document.getElementById('result2').innerHTML = out;
+}
+
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<pre>
+		주민등록번호를 입력 받아 생년월일과 성별을 출력하는 프로그램
+		(입력은 prompt로 입력받는다.)
+		</pre>
+		<input type="button" value="확인" onclick="proc1()">
+		<div id="result1"></div>
+	</div>
+	
+	<div class="box">
+		<pre>
+		주민등록번호를 입력 받아 주민등록번호의 유효성을 검사하는 프로그램
+		(ABCDEF-GHIJKLM)
+		</pre>
+		<input type="button" value="확인" onclick="proc2()">
+		<div id="result2"></div>
+	</div>
+</body>
+</html>
