@@ -8,11 +8,13 @@
 #result1 {
 	box-sizing: border-box;
 }
+
 .dimg {
 	width : calc(20% - 20px);
 	height : auto;
 	display : inline-block;
 }
+
 img {
 	width : 100%;
 	height : 70%;
@@ -29,8 +31,12 @@ img {
 		}
 	}
 	
+	ptag = null;
+	
 	function proc1() {
-		str = this.firstChild.data;
+		if(ptag != null) {
+			ptag.parentNode.removeChild(ptag);
+		}
 		
 		rand = parseInt(Math.random() * 6) + 5;
 		
@@ -41,6 +47,9 @@ img {
 		ptag.appendChild(text);
 		
 		this.appendChild(ptag);	
+		
+		// click 이벤트 종료
+		this.removeEventListener('click', proc1);
 	}
 
 </script>
