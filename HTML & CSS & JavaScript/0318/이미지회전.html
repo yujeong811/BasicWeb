@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<script>
+function proc1() {
+	// 스타일로 설정된 테두리를 지운다
+	// 할인율 참고 초기값 주고 하기
+	
+	// 시작버튼 감추기 - 더이상 클릭하지 못하도록
+	
+	// result1 검색
+	vres1 = ;
+		
+	// a = 1초마다 한번씩 { setinteval
+	// result1의 첫번째 자식을 선택
+	child = appendChild
+	
+	// 마지막 자식으로 추가
+	= appendChild
+	// }
+}
+
+function stop() {
+	// 시작버튼 보이기
+	
+	// 랜덤발생 0~이미지개수만큼
+	// 랜덤발생된 번째 자식이미지의 스타일로 border = double red 설정
+	
+	// 회전을 멈춘다
+	
+}
+
+</script>
+</head>
+<body>
+
+	<div class="box">
+		<pre>
+		result1의 첫번째 자식을 선택한다.(firstChild)
+		선택한 자식을 맨 마지막 자식으로 추가한다.(appendChild())
+		
+		appendChild() 수행시 기존의 존재하는 요소를 대상으로 작업시 이동의 효과가 있다.(잘라내기-붙여넣기) 
+		
+		종료버튼을 누르면 랜덤 몇번째에 테두리를 그려줌
+		시작버튼 누르면 시작버튼 사라지고 종료버튼만 생김
+		
+		</pre>
+		<input type="button" value="시작" onclick="proc1()">
+		<input type="button" value="종료" onclick="stop()">
+		<div id="result1"> /* 부모 firstChild */
+		<img src="" alt=""> /* 자식 */
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		<img src="" alt="">
+		</div>
+	</div>
+</body>
+</html>
